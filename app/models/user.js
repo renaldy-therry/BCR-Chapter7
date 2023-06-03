@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Role, {
         foreignKey: 'roleId',
       });
+      this.hasOne(models.UserCar, {
+        foreignKey: 'userId',
+        as: 'userId',
+    });
     }
 
     toJSON() {
