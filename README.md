@@ -1,5 +1,6 @@
 # Challenge Chapter 7
 percobaan unit testing menggunakan jest dan supertest, dan percobaan deployment menggunakan railway
+
 ## Data Admin
 
 -   email : renaldy@binar.co.id
@@ -58,3 +59,6 @@ yarn test
 ```bash
 yarn develop
 ```
+
+## ERD
+![db](./erd.png)
