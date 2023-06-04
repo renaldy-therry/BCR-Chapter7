@@ -18,7 +18,7 @@ describe('Initial API Run', () => {
 describe('Handling Route not found', () => {
     const mockReq = {
         method: 'POST',
-        url: 'https://arief/cars',
+        url: 'https://renaldy/cars',
     };
 
     const mockRes = {

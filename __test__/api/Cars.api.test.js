@@ -25,7 +25,7 @@ const authenticationController = new AuthenticationController({
 
 const carController = new CarController({ carModel, userCarModel, dayjs });
 
-// Global Func
+// Global Function
 const getRole = async (role) => {
     return await authenticationController.roleModel.findOne({
         where: { name: authenticationController.accessControl[role] },

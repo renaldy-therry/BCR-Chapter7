@@ -5,6 +5,6 @@ describe('check application format', () => {
         expect(MORGAN_FORMAT).toBe(':method :url :status :res[content-length] - :response-time ms');
     });
     it('it must have jwt signature key or error handling for that', () => {
-        expect(JWT_SIGNATURE_KEY).toBe('Rahasia');
+        expect(JWT_SIGNATURE_KEY).toBe(process.env.JWT_SIGNATURE_KEY || 'Rahasia');
     });
 });

@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { User, Role } = require('../../app/models');
 
-// Define the Class
 const roleModel = Role;
 const userModel = User;
 const authenticationController = new AuthenticationController({
@@ -20,21 +19,21 @@ describe('GET /v1/auth/whoami', () => {
     let token;
 
     const mockUser = {
-        email: 'johnny@binar.co.id',
+        email: 'brian@binar.co.id',
         password: '123456',
     };
 
     const mockNewUser = {
-        name: 'morgan',
-        email: 'morgan@gmail.co.id',
+        name: 'siti',
+        email: 'siti@gmail.co.id',
         password: '123456',
     };
 
     const mockUnregisteredUser = {
         id: 12,
-        name: 'jamal',
-        email: 'jamal@gmail.com',
-        image: 'jamal.jpeg.org',
+        name: 'kamal',
+        email: 'kamal@gmail.com',
+        image: 'kamal.jpeg.org',
     };
 
     const mockRole = {
@@ -44,7 +43,7 @@ describe('GET /v1/auth/whoami', () => {
 
     const mockInvalidRole = {
         id: 1,
-        name: 'HEHEHE',
+        name: 'MASTER',
     };
 
     describe('Checking user info by logged user', () => {
@@ -103,8 +102,8 @@ describe('GET /v1/auth/whoami', () => {
 
 describe('POST /v1/auth/register', () => {
     const mockNewUser = {
-        name: 'arief',
-        email: 'arief@gmail.co.id',
+        name: 'renaldy',
+        email: 'renaldy@gmail.co.id',
         password: '123456',
     };
 
