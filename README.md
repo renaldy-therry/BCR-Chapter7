@@ -1,6 +1,9 @@
 # Challenge Chapter 7
 percobaan unit testing menggunakan jest dan supertest, dan percobaan deployment menggunakan railway
 
+## Test Result
+![Test Result](./test.png)
+
 ## Data Admin
 
 -   email : renaldy@binar.co.id
