@@ -5,15 +5,21 @@
   "license": "MIT",
   "scripts": {
     "start": "node -r dotenv/config bin/www",
-    "develop": "nodemon -r dotenv/config bin/www",
-    "db:create": "sequelize db:create",
-    "db:drop": "sequelize db:drop",
-    "db:migrate": "sequelize db:migrate",
-    "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all"
+        "develop": "nodemon -r dotenv/config bin/www",
+        "db:create:test": "cross-env NODE_ENV=test sequelize db:create",
+        "pretest": "cross-env NODE_ENV=test yarn db:reset",
+        "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --coverage --colors --verbose --detectOpenHandles --forceExit",
+        "db:create": "sequelize db:create",
+        "db:drop": "sequelize db:drop",
+        "db:migrate": "sequelize db:migrate",
+        "db:migrate:undo:all": "sequelize db:migrate:undo:all",
+        "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all",
+        "db:reset": "yarn db:drop && yarn db:create && yarn db:migrate && yarn db:seed"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
