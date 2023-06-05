@@ -18,8 +18,8 @@ describe('Check token diff between login and autorize token', () => {
 
     const dummyAdmin = {
         id: 10,
-        name: 'udin',
-        email: 'udin@gmail.com',
+        name: 'jansen',
+        email: 'jansen@gmail.com',
         image: 'string',
     };
 

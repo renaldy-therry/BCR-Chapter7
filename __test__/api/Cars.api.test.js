@@ -177,18 +177,18 @@ describe('PUT /v1/cars/:id', () => {
     };
 
     const mockUpdateCar = {
-        name: 'string neww',
+        name: 'ferrari gallardo',
         price: 0,
-        image: 'string.png',
+        image: 'ferrari.png',
         size: 'string',
     };
 
     const mockInvalidUpdateCar = {
-        name: ['string neww'],
+        name: ['ferrari gallardo'],
         price: {
             price: 0,
         },
-        image: 'string.png',
+        image: 'ferrari.png',
         size: 'string',
     };
 
@@ -222,8 +222,8 @@ describe('Delete /v1/cars/:id', () => {
         isCurrentlyRented: false,
     };
     const mockAdmin = {
-        name: 'jamal',
-        email: 'jamal@gmail.com',
+        name: 'bonsom',
+        email: 'bonsom@gmail.com',
         password: '1234567',
     };
 
